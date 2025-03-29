@@ -22,9 +22,9 @@ public class Exit extends Command {
 
     @Override
     public ExecutionResponse apply(String[] args) {
-        console.println("Сохранить коллекцию перед выходом? (да/нет)");
+        console.println("Сохранить коллекцию перед выходом? (yes/no)");
         String response = console.readln().trim().toLowerCase();
-        if (response.equals("да")) {
+        if (response.equals("yes")) {
             collectionManager.saveCollection();
             console.println("Коллекция сохранена.");
         }
